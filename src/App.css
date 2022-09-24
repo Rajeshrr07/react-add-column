@@ -1,38 +1,61 @@
-.App {
-  text-align: center;
+.row {
+	display: flex;
+	gap: 40px;
+	justify-content: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.col {
+	margin-top: 40px;
+	width: 300px;
+	background: #f4f5f7;
+	padding: 10px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button {
+	border: none;
+	display: block;
+	margin-top: 20px;
+	background: transparent;
+	cursor: pointer;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+button.delete-button {
+	margin-left: 80px !important;
+	display: inline-block;
+	visibility: hidden;
 }
-
-.App-link {
-  color: #61dafb;
+.card-section:hover .delete-button {
+	visibility: visible;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button svg {
+	height: 24px !important;
+	width: 24px !important;
+	vertical-align: middle;
+	color: #42526e;
+	opacity: 0.5;
+}
+.card-section {
+	max-width: 300px;
+	cursor: pointer;
+	user-select: none;
+	/* box-sizing: border-box; */
+	/* display: flex; */
+	/* flex-direction: column; */
+	/* position: relative; */
+	margin: 5px 0px;
+	border-radius: 3px;
+	box-shadow: var(
+		--ds-shadow-raised,
+		0 1px 1px rgba(23, 43, 77, 0.2),
+		0 0 1px rgba(23, 43, 77, 0.2)
+	);
+	/* transition: background-color 140ms ease-in-out 0s, color 140ms ease-in-out 0s; */
+	background-color: #fff;
+	color: var(--ds-text, #172b4d);
+	/* filter: none; */
+	height: 80px;
+	/* margin-top: 10px; */
+}
+.card-input {
+	border: none;
+}
+input.card-input:focus-visible {
+	outline: none !important;
 }
